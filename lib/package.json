@@ -1,0 +1,34 @@
+{
+  "author": "Pedro Xudre <xudre@me.com>",
+  "bugs": {
+    "url": "https://github.com/xudre/angular-preflight/issues"
+  },
+  "contributors": [
+    {
+      "name": "Pedro Xudre <xudre@me.com>"
+    }
+  ],
+  "description": "Angular - component and HTTP request interceptor for content preflight",
+  "engines": {
+    "node": ">=8.9.4"
+  },
+  "homepage": "https://github.com/xudre/angular-preflight#readme",
+  "keywords": [
+    "angular",
+    "preflight"
+  ],
+  "license": "MIT",
+  "main": "angular-preflight.js",
+  "name": "@angular/preflight",
+  "peerDependencies": {
+    "@angular/common": "^5.2.7",
+    "@angular/core": "^5.2.7"
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xudre/angular-preflight.git"
+  },
+  "types": "angular-preflight.d.ts",
+  "version": "0.1.0"
+}

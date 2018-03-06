@@ -1,0 +1,36 @@
+:host {
+  display: inline-block;
+  clear: both;
+
+  svg {
+    float: left;
+    fill: currentColor;
+    fill-rule: evenodd;
+
+    rect {
+      $base-delay: .3s;
+      animation-name: PreflightLinePulse;
+      animation-duration: 1s;
+      animation-timing-function: ease-in;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      fill-opacity: 0.06;
+
+      @for $i from 1 through 20 {
+        &:nth-child(n + #{($i + 1)}) {
+          animation-delay: ($i * $base-delay);
+        }
+      }
+    }
+  }
+
+  @keyframes PreflightLinePulse {
+    0% {
+      fill-opacity: 0.06;
+    }
+
+    100% {
+      fill-opacity: 0.2;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "declaration": true,
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "baseUrl": ".",
+    "outDir": "build",
+    "lib": [
+      "es2015",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "flatModuleOutFile": false,
+    "experimentalDecorators": true,
+    "fullTemplateTypeCheck": true,
+    "preserveWhitespaces": false,
+    "strictInjectionParameters": true,
+    "strictMetadataEmit": true,
+    "generateCodeForLibraries": false
+  },
+  "files": [
+    "src/angular-preflight.ts"
+  ]
+}
