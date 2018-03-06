@@ -86,7 +86,7 @@ export default {
 /**
  * ${pkg.name} - ${pkg.description}
  * @version v${pkg.version}
- * @author ${pkg.author.name}
+ * @author ${pkg.author.name} <${pkg.author.email}>
  * @link ${pkg.homepage}
  * @license ${pkg.license}
  */

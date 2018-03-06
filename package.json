@@ -1,6 +1,6 @@
 {
   "name": "@pipecat/angular-preflight",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Angular - component and HTTP request interceptor for content preflight",
   "main": "src/angular-preflight.ts",
   "engines": {
@@ -22,9 +22,13 @@
     "angular",
     "preflight"
   ],
-  "author": "Pedro Xudre <xudre@me.com>",
+  "author": {
+    "name": "Pedro Xudre",
+    "email": "xudre@me.com"
+  },
   "contributors": [{
-    "name": "Pedro Xudre <xudre@me.com>"
+    "name": "Pedro Xudre",
+    "email": "xudre@me.com"
   }],
   "license": "MIT",
   "bugs": {

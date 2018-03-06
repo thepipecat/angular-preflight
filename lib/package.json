@@ -1,11 +1,15 @@
 {
-  "author": "Pedro Xudre <xudre@me.com>",
+  "author": {
+    "name": "Pedro Xudre",
+    "email": "xudre@me.com"
+  },
   "bugs": {
     "url": "https://github.com/xudre/angular-preflight/issues"
   },
   "contributors": [
     {
-      "name": "Pedro Xudre <xudre@me.com>"
+      "name": "Pedro Xudre",
+      "email": "xudre@me.com"
     }
   ],
   "description": "Angular - component and HTTP request interceptor for content preflight",
