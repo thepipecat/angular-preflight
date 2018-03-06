@@ -19,12 +19,11 @@
   ],
   "license": "MIT",
   "main": "angular-preflight.js",
-  "name": "@angular/preflight",
+  "name": "@pipecat/angular-preflight",
   "peerDependencies": {
     "@angular/common": "^5.2.7",
     "@angular/core": "^5.2.7"
   },
-  "private": false,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/xudre/angular-preflight.git"

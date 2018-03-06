@@ -1,5 +1,5 @@
 {
-  "name": "@angular/preflight",
+  "name": "@pipecat/angular-preflight",
   "version": "0.1.0",
   "description": "Angular - component and HTTP request interceptor for content preflight",
   "main": "src/angular-preflight.ts",
@@ -12,7 +12,7 @@
     "files": "node tools/setup-files.js",
     "package": "node tools/setup-package.js",
     "build": "npm run clean && npm run bundle && npm run files && npm run package",
-    "publish": "cd ./lib && npm publish"
+    "publish": "cd ./lib && npm publish --access public"
   },
   "repository": {
     "type": "git",
@@ -23,13 +23,10 @@
     "preflight"
   ],
   "author": "Pedro Xudre <xudre@me.com>",
-  "contributors": [
-    {
-      "name": "Pedro Xudre <xudre@me.com>"
-    }
-  ],
+  "contributors": [{
+    "name": "Pedro Xudre <xudre@me.com>"
+  }],
   "license": "MIT",
-  "private": false,
   "bugs": {
     "url": "https://github.com/xudre/angular-preflight/issues"
   },
