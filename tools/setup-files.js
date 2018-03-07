@@ -26,6 +26,6 @@ fs.renameSync(libPath + '/index.umd.js.map', libPath + '/' + libName + '.js.map'
 fs.renameSync(libPath + '/index.umd.min.js', libPath + '/' + libName + '.min.js');
 fs.renameSync(libPath + '/index.umd.min.js.map', libPath + '/' + libName + '.min.js.map');
 
-cp(['LICENSE', 'README.md', typesPath + '/**/*.d.ts', './' + libPath], true, function(err) {
+cp([typesPath + '/**/*.d.ts', './' + libPath], true, function(err) {
   if (err) console.error(err);
 });
