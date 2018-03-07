@@ -11,7 +11,7 @@
     "bundle": "tsc && webpack --config webpack-umd.config.ts --progress --colors",
     "files": "node tools/setup-files.js",
     "package": "node tools/setup-package.js",
-    "build": "npm run clean && npm run bundle && npm run files && npm run package",
+    "build": "npm run clean && npm run bundle && npm version patch && npm run files && npm run package",
     "publish": "cd ./lib && npm publish --access public"
   },
   "repository": {
