@@ -16,7 +16,7 @@
     "postbuild": "git add -A lib && git commit -m \"New build\" -- lib",
     "prepublish": "npm version patch && npm run package",
     "publish": "cd ./lib && npm test && npm publish --access public",
-    "postpublish": "git add -A lib && git commit --amend && git push && git push --tags"
+    "postpublish": "git add -A lib && git commit --amend --no-edit && git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -30,12 +30,10 @@
     "name": "Pedro Xudre",
     "email": "xudre@me.com"
   },
-  "contributors": [
-    {
-      "name": "Pedro Xudre",
-      "email": "xudre@me.com"
-    }
-  ],
+  "contributors": [{
+    "name": "Pedro Xudre",
+    "email": "xudre@me.com"
+  }],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/xudre/angular-preflight/issues"
