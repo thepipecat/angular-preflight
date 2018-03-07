@@ -11,8 +11,12 @@
     "bundle": "tsc && webpack --config webpack-umd.config.ts --progress --colors",
     "files": "node tools/setup-files.js",
     "package": "node tools/setup-package.js",
-    "build": "npm run clean && npm run bundle && npm version patch && npm run files && npm run package",
-    "publish": "cd ./lib && npm publish --access public"
+    "prebuild": "npm run clean",
+    "build": "npm run bundle && npm run files && npm run package",
+    "postbuild": "git add -A lib && git commit -m \"New build\" -- lib",
+    "prepublish": "npm version patch && npm run package",
+    "publish": "cd ./lib && npm test && npm publish --access public",
+    "postpublish": "git add -A lib && git commit --amend && git push && git push --tags"
   },
   "repository": {
     "type": "git",
