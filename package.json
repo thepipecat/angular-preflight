@@ -4,7 +4,8 @@
   "description": "Angular - component and HTTP request interceptor for content preflight",
   "main": "src/angular-preflight.ts",
   "engines": {
-    "node": ">=8.9.4"
+    "node": ">=8.10.0",
+    "npm": ">=5.7.1"
   },
   "scripts": {
     "clean": "node tools/setup-clean.js",
@@ -14,13 +15,13 @@
     "prebuild": "npm run clean",
     "build": "npm run bundle && npm run files && npm run package",
     "postbuild": "git add -A lib && git commit -m \"New build\" -- lib",
-    "prepublish": "npm version patch && npm run package",
+    "prepublishOnly": "npm version patch && npm run package",
     "publish": "cd ./lib && npm test && npm publish --access public",
     "postpublish": "git add -A lib && git commit --amend --no-edit && git push && git push --tags"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xudre/angular-preflight.git"
+    "url": "git+https://github.com/thepipecat/angular-preflight.git"
   },
   "keywords": [
     "angular",
@@ -30,15 +31,17 @@
     "name": "Pedro Xudre",
     "email": "xudre@me.com"
   },
-  "contributors": [{
-    "name": "Pedro Xudre",
-    "email": "xudre@me.com"
-  }],
+  "contributors": [
+    {
+      "name": "Pedro Xudre",
+      "email": "xudre@me.com"
+    }
+  ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/xudre/angular-preflight/issues"
+    "url": "https://github.com/thepipecat/angular-preflight/issues"
   },
-  "homepage": "https://github.com/xudre/angular-preflight#readme",
+  "homepage": "https://github.com/thepipecat/angular-preflight#readme",
   "dependencies": {
     "@angular/common": "^5.2.7",
     "@angular/core": "^5.2.7"
