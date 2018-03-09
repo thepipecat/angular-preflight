@@ -4,7 +4,7 @@
     "email": "xudre@me.com"
   },
   "bugs": {
-    "url": "https://github.com/xudre/angular-preflight/issues"
+    "url": "https://github.com/thepipecat/angular-preflight/issues"
   },
   "contributors": [
     {
@@ -14,9 +14,10 @@
   ],
   "description": "Angular - component and HTTP request interceptor for content preflight",
   "engines": {
-    "node": ">=8.9.4"
+    "node": ">=8.10.0",
+    "npm": ">=5.7.1"
   },
-  "homepage": "https://github.com/xudre/angular-preflight#readme",
+  "homepage": "https://github.com/thepipecat/angular-preflight#readme",
   "keywords": [
     "angular",
     "preflight"
@@ -30,8 +31,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xudre/angular-preflight.git"
+    "url": "git+https://github.com/thepipecat/angular-preflight.git"
   },
   "types": "angular-preflight.d.ts",
-  "version": "0.1.2"
+  "version": "0.1.3"
 }
