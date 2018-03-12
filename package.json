@@ -14,7 +14,9 @@
     "package": "node tools/setup-package.js",
     "prebuild": "npm run clean",
     "build": "npm run bundle && npm run files && npm run package",
-    "publish": "cd ./lib && npm publish --access public"
+    "link": "cd ./lib && npm link",
+    "publish": "cd ./lib && npm publish --access public",
+    "push": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
