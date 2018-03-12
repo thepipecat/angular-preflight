@@ -34,5 +34,5 @@
     "url": "git+https://github.com/thepipecat/angular-preflight.git"
   },
   "types": "angular-preflight.d.ts",
-  "version": "0.1.5"
+  "version": "0.1.4"
 }

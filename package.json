@@ -1,6 +1,6 @@
 {
   "name": "@pipecat/angular-preflight",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Angular - component and HTTP request interceptor for content preflight",
   "main": "src/angular-preflight.ts",
   "engines": {
@@ -14,10 +14,7 @@
     "package": "node tools/setup-package.js",
     "prebuild": "npm run clean",
     "build": "npm run bundle && npm run files && npm run package",
-    "postbuild": "git add -A lib && git commit -m \"New build\" -- lib",
-    "prepublishOnly": "npm version patch && npm run package",
-    "publish": "cd ./lib && npm test && npm publish --access public",
-    "postpublish": "git add -A lib && git commit --amend --no-edit && git push && git push --tags"
+    "publish": "cd ./lib && npm publish --access public"
   },
   "repository": {
     "type": "git",
