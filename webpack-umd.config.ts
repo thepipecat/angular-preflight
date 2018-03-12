@@ -11,8 +11,8 @@ const libPath = 'lib';
 
 export default {
   entry: {
-    'index.umd': './src/angular-preflight.ts',
-    'index.umd.min': './src/angular-preflight.ts'
+    'index.umd': './src/' + libName + '.ts',
+    'index.umd.min': './src/' + libName + '.ts'
   },
   output: {
     path: path.join(__dirname, libPath),

@@ -5,13 +5,14 @@
 const fs = require('fs');
 
 const libPath = 'lib';
+const libName = 'angular-preflight';
 
 let packageContent = fs.readFileSync('package.json').toString();
 
 const packageJson = JSON.parse(packageContent);
 
-packageJson.main = 'angular-preflight.js';
-packageJson.types = 'angular-preflight.d.ts';
+packageJson.main = libName + '.js';
+packageJson.types = libName + '.d.ts';
 packageJson.peerDependencies = packageJson.dependencies;
 
 delete packageJson.scripts;
