@@ -5,8 +5,8 @@
 const del = require('del');
 const rimraf = require('rimraf');
 
-const buildPath = 'build';
+const tmpPath = '.tmp';
 const libPath = 'lib';
 
-rimraf.sync('./' + buildPath);
+rimraf.sync('./' + tmpPath);
 del.sync([libPath + '/*', '!' + libPath + '/.gitkeep']);

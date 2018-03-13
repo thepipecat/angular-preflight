@@ -1,32 +1,53 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "jsx": "react",
-    "declaration": true,
-    "sourceMap": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
     "baseUrl": ".",
-    "outDir": "build",
+    "declaration": true,
+    "stripInternal": true,
+    "experimentalDecorators": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "module": "es2015",
+    "moduleResolution": "node",
+    "paths": {
+      "@angular/core": [
+        "node_modules/@angular/core"
+      ],
+      "@angular/common": [
+        "node_modules/@angular/common"
+      ],
+      "rxjs/*": [
+        "node_modules/rxjs/*"
+      ]
+    },
+    "rootDir": ".tmp",
+    "outDir": "lib",
+    "sourceMap": true,
+    "inlineSources": true,
+    "target": "es5",
+    "skipLibCheck": true,
+    "pretty": true,
+    "removeComments": true,
     "lib": [
       "es2015",
       "dom"
+    ],
+    "typeRoots": [
+      "node_modules/@types"
     ]
   },
   "angularCompilerOptions": {
-    "flatModuleOutFile": false,
-    "experimentalDecorators": true,
-    "fullTemplateTypeCheck": true,
-    "preserveWhitespaces": false,
-    "strictInjectionParameters": true,
+    "genDir": "lib",
     "strictMetadataEmit": true,
-    "generateCodeForLibraries": false
+    "skipTemplateCodegen": true
   },
   "files": [
-    "src/angular-preflight.ts"
-  ]
+    ".tmp/index.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    ".tmp",
+    "lib"
+  ],
+  "compileOnSave": false
 }

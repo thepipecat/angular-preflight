@@ -29,26 +29,30 @@ export class AngularPreflightComponent implements OnInit {
     this.lineWidth = parseInt(this.lineWidth);
     this.lineDiff = parseInt(this.lineDiff);
 
-    let element: HTMLElement = this.el.nativeElement;
-    let style: CSSStyleDeclaration = window.getComputedStyle(element);
+    try {
+      let element: HTMLElement = this.el.nativeElement;
+      let style: CSSStyleDeclaration = window.getComputedStyle(element);
 
-    element.setAttribute('aria-hidden', 'true');
+      element.setAttribute('aria-hidden', 'true');
 
-    this.lineSize = parseInt(style.fontSize);
-    this.lineHeight = parseInt(style.lineHeight) - this.lineSize;
+      this.lineSize = parseInt(style.fontSize as string);
+      this.lineHeight = parseInt(style.lineHeight as string) - this.lineSize;
 
-    this.canvasHeight = ((this.lineSize + this.lineHeight) * this.linesCount) - this.lineHeight;
+      this.canvasHeight = ((this.lineSize + this.lineHeight) * this.linesCount) - this.lineHeight;
 
-    this.lines = new Array<number>();
+      this.lines = new Array<number>();
 
-    for (let i = 0; i < this.linesCount; i++) {
-      let width: number = this.lineWidth - (Math.random() * this.lineDiff);
+      for (let i = 0; i < this.linesCount; i++) {
+        let width: number = this.lineWidth - (Math.random() * this.lineDiff);
 
-      width -= Math.random() * this.lineDiff;
+        width -= Math.random() * this.lineDiff;
 
-      width = Math.max(width, this.lineSize);
+        width = Math.max(width, this.lineSize);
 
-      this.lines.push(Math.round(width));
+        this.lines.push(Math.round(width));
+      }
+    } catch (err) {
+      console.warn('Angular Preflight', err);
     }
   }
 }

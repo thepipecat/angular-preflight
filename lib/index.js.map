@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../.tmp/index.ts"],"names":[],"mappings":"AAAA,cAAc,4BAA4B,CAAC;AAC3C,cAAc,+BAA+B,CAAC;AAC9C,cAAc,iCAAiC,CAAC","sourcesContent":["export * from './angular-preflight.module';\nexport * from './angular-preflight.component';\nexport * from './angular-preflight.interceptor';\n"]}
