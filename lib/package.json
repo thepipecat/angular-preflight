@@ -1,11 +1,12 @@
 {
-  "name": "@pipecat/angular-preflight",
-  "version": "0.1.6",
-  "description": "Angular - component and HTTP request interceptor for content preflight",
+  "name": "angular-preflight",
+  "version": "0.1.0",
+  "description": "Angular component for text preflight and HTTP request interceptor.",
   "main": "index.umd.min.js",
   "module": "index.js",
   "keywords": [
     "angular",
+    "text",
     "preflight"
   ],
   "author": {

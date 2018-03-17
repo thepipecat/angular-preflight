@@ -1,7 +1,7 @@
 {
-  "name": "@pipecat/angular-preflight",
-  "version": "0.1.6",
-  "description": "Angular - component and HTTP request interceptor for content preflight",
+  "name": "angular-preflight",
+  "version": "0.1.0",
+  "description": "Angular component for text preflight and HTTP request interceptor.",
   "main": "src/angular-preflight.ts",
   "engines": {
     "node": ">=8.10.0",
@@ -27,6 +27,7 @@
   },
   "keywords": [
     "angular",
+    "text",
     "preflight"
   ],
   "author": {

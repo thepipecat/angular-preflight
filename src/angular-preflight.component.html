@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" [attr.width]="lineWidth" [attr.height]="canvasHeight" [attr.viewBox]="'0 0 ' + lineWidth + ' ' + canvasHeight">
-  <g>
-    <rect *ngFor="let line of lines; index as i" x="0" [attr.y]="((lineSize + lineHeight) * i) + 'px'" [attr.width]="line + 'px'"
-      [attr.height]="lineSize + 'px'" [attr.rx]="(lineSize / 2) + 'px'" [attr.ry]="(lineSize / 2) + 'px'" />
-  </g>
-</svg>

@@ -1,11 +1,11 @@
-import { Component, OnInit, Input, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, AfterViewInit, AfterViewChecked, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'ui-preflight',
-  templateUrl: './angular-preflight.component.html',
+  template: '<!-- empty -->',
   styleUrls: ['./angular-preflight.component.scss']
 })
-export class AngularPreflightComponent implements OnInit {
+export class AngularPreflightComponent implements OnInit, AfterViewInit, AfterViewChecked, OnChanges {
   @Input('lines')
   public linesCount: any = 1;
   @Input('width')
@@ -17,21 +17,34 @@ export class AngularPreflightComponent implements OnInit {
   @Input('space')
   public lineHeight: any = -1;
 
-  public lines: Array<number>;
   public canvasHeight: number;
 
   constructor(
     private el: ElementRef
   ) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  ngAfterViewInit() {
+    this.Setup();
+  }
+
+  ngAfterViewChecked() {
+    // this.Setup();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.Setup();
+  }
+
+  private Setup() {
     this.linesCount = parseInt(this.linesCount);
     this.lineWidth = parseInt(this.lineWidth);
     this.lineDiff = parseInt(this.lineDiff);
 
     try {
       let element: HTMLElement = this.el.nativeElement;
-      let style: CSSStyleDeclaration = window.getComputedStyle(element);
+      let style: CSSStyleDeclaration = document.defaultView.getComputedStyle(element, undefined);
 
       element.setAttribute('aria-hidden', 'true');
 
@@ -40,7 +53,8 @@ export class AngularPreflightComponent implements OnInit {
 
       this.canvasHeight = ((this.lineSize + this.lineHeight) * this.linesCount) - this.lineHeight;
 
-      this.lines = new Array<number>();
+      let svg: string = `<svg xmlns="http://www.w3.org/2000/svg" width="${this.lineWidth}" height="${this.canvasHeight}" viewBox="0 0 ${this.lineWidth} ${this.canvasHeight}"><g>`;
+      let round: number = this.lineSize * .5;
 
       for (let i = 0; i < this.linesCount; i++) {
         let width: number = this.lineWidth - (Math.random() * this.lineDiff);
@@ -49,8 +63,12 @@ export class AngularPreflightComponent implements OnInit {
 
         width = Math.max(width, this.lineSize);
 
-        this.lines.push(Math.round(width));
+        svg += `<rect x="0" y="${((this.lineSize + this.lineHeight) * i)}px" width="${width}px" height="${this.lineSize}px" rx="${round}px" ry="${round}px" />`;
       }
+
+      svg += `</g></svg>`;
+
+      element.innerHTML = svg;
     } catch (err) {
       console.warn('Angular Preflight', err);
     }
