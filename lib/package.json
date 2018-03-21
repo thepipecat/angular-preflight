@@ -1,7 +1,7 @@
 {
   "name": "angular-preflight",
-  "version": "0.1.0",
-  "description": "Angular component for text preflight and HTTP request interceptor.",
+  "version": "0.1.1",
+  "description": "Angular.io component for text preflight and HTTP request interceptor.",
   "main": "index.umd.min.js",
   "module": "index.js",
   "keywords": [
@@ -13,12 +13,10 @@
     "name": "Pedro Xudre",
     "email": "xudre@me.com"
   },
-  "contributors": [
-    {
-      "name": "Pedro Xudre",
-      "email": "xudre@me.com"
-    }
-  ],
+  "contributors": [{
+    "name": "Pedro Xudre",
+    "email": "xudre@me.com"
+  }],
   "license": "MIT",
   "repository": {
     "type": "git",

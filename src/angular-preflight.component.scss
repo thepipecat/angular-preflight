@@ -2,7 +2,7 @@
   display: inline-block;
   clear: both;
 
-  svg {
+  /deep/ svg {
     float: left;
     fill: currentColor;
     fill-rule: evenodd;

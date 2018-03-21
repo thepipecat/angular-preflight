@@ -7,7 +7,7 @@ export default {
   output: {
     format: 'umd',
     file: 'lib/index.umd.js',
-    name: 'pipecat.AngularPreflight',
+    name: 'AngularPreflight',
     sourcemap: true,
     globals: {
       '@angular/core': 'ng.core',

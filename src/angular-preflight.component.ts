@@ -2,7 +2,7 @@ import { Component, OnInit, Input, ElementRef, AfterViewInit, AfterViewChecked, 
 
 @Component({
   selector: 'ui-preflight',
-  template: '<!-- empty -->',
+  template: '<!-- preflight space -->',
   styleUrls: ['./angular-preflight.component.scss']
 })
 export class AngularPreflightComponent implements OnInit, AfterViewInit, AfterViewChecked, OnChanges {
